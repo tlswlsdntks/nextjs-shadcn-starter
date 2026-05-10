@@ -1,0 +1,2 @@
+- [Next.js 16 conventions](project_nextjs_version.md) — Middleware is now `proxy.ts`; check `node_modules/next/dist/docs/` before flagging API mismatches
+- [Starter kit scope](project_starterkit_scope.md) — Mock/demo data is intentional; focus reviews on inherited structural issues, not placeholder content
