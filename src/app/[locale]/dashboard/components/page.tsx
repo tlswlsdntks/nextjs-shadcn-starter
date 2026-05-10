@@ -19,8 +19,8 @@ export default async function ComponentsPage() {
         <div className="grid gap-6 md:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Buttons</CardTitle>
-              <CardDescription>Various button styles and sizes</CardDescription>
+              <CardTitle className="text-base">{t("buttons")}</CardTitle>
+              <CardDescription>{t("buttonsDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="flex flex-wrap gap-2">
               <Button>Default</Button>
@@ -36,8 +36,8 @@ export default async function ComponentsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Badges</CardTitle>
-              <CardDescription>Status and label indicators</CardDescription>
+              <CardTitle className="text-base">{t("badges")}</CardTitle>
+              <CardDescription>{t("badgesDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="flex flex-wrap gap-2">
               <Badge>Default</Badge>
@@ -49,8 +49,8 @@ export default async function ComponentsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Form Inputs</CardTitle>
-              <CardDescription>Input fields and labels</CardDescription>
+              <CardTitle className="text-base">{t("formInputs")}</CardTitle>
+              <CardDescription>{t("formInputsDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
@@ -66,8 +66,8 @@ export default async function ComponentsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Avatars</CardTitle>
-              <CardDescription>User profile representations</CardDescription>
+              <CardTitle className="text-base">{t("avatars")}</CardTitle>
+              <CardDescription>{t("avatarsDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="flex items-center gap-4">
               <Avatar className="h-16 w-16">
@@ -87,8 +87,8 @@ export default async function ComponentsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Skeleton</CardTitle>
-              <CardDescription>Loading placeholders</CardDescription>
+              <CardTitle className="text-base">{t("skeleton")}</CardTitle>
+              <CardDescription>{t("skeletonDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-center gap-3">
@@ -106,8 +106,8 @@ export default async function ComponentsPage() {
 
           <Card>
             <CardHeader>
-              <CardTitle className="text-base">Separator</CardTitle>
-              <CardDescription>Content dividers</CardDescription>
+              <CardTitle className="text-base">{t("separator")}</CardTitle>
+              <CardDescription>{t("separatorDesc")}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-sm">Section A</p>

@@ -9,7 +9,7 @@ const stats = [
   { key: "revenue", value: "$48,295", change: "+8.2%", icon: DollarSign },
   { key: "activeProjects", value: "24", change: "+3", icon: FolderOpen },
   { key: "growth", value: "18.7%", change: "+2.4%", icon: TrendingUp },
-];
+] as const;
 
 const activities = [
   { user: "Alice Kim", action: "created a new project", time: "2 min ago" },
@@ -31,14 +31,14 @@ export default async function DashboardPage() {
             <Card key={key}>
               <CardHeader className="flex flex-row items-center justify-between pb-2">
                 <CardTitle className="text-sm font-medium text-muted-foreground">
-                  {t(key as "totalUsers" | "revenue" | "activeProjects" | "growth")}
+                  {t(key)}
                 </CardTitle>
                 <Icon className="h-4 w-4 text-muted-foreground" />
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{value}</div>
                 <p className="mt-1 text-xs text-muted-foreground">
-                  <span className="text-green-500">{change}</span> from last month
+                  <span className="text-green-500">{change}</span> {t("fromLastMonth")}
                 </p>
               </CardContent>
             </Card>
@@ -49,14 +49,14 @@ export default async function DashboardPage() {
           <CardHeader className="flex flex-row items-center justify-between">
             <div>
               <CardTitle>{t("recentActivity")}</CardTitle>
-              <CardDescription>Latest actions in your workspace</CardDescription>
+              <CardDescription>{t("activityDescription")}</CardDescription>
             </div>
             <Badge variant="secondary">{t("viewAll")}</Badge>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
-              {activities.map((activity, i) => (
-                <div key={i} className="flex items-center gap-4">
+              {activities.map((activity) => (
+                <div key={`${activity.user}-${activity.time}`} className="flex items-center gap-4">
                   <div className="flex h-9 w-9 items-center justify-center rounded-full bg-muted text-sm font-medium">
                     {activity.user[0]}
                   </div>

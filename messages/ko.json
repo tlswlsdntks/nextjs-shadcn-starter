@@ -28,7 +28,7 @@
       "badge": "오픈 소스",
       "title": "다음 프로젝트를",
       "titleHighlight": "10배 빠르게",
-      "description": "TypeScript, Tailwind CSS, shadcn/ui, 다크 모드, 다국어 지원을 갖춘 프로덕션 레디 Next.js 15 스타터 킷. 빠른 출시를 위한 모든 것이 준비되어 있습니다.",
+      "description": "TypeScript, Tailwind CSS, shadcn/ui, 다크 모드, 다국어 지원을 갖춘 프로덕션 레디 Next.js 16 스타터 킷. 빠른 출시를 위한 모든 것이 준비되어 있습니다.",
       "cta": "시작하기",
       "ctaSecondary": "GitHub 보기"
     },
@@ -37,7 +37,7 @@
       "description": "현대적인 웹 애플리케이션 구축을 위해 엄선된 도구와 패턴 모음입니다.",
       "items": {
         "nextjs": {
-          "title": "Next.js 15",
+          "title": "Next.js 16",
           "description": "App Router, 서버 컴포넌트, 최신 React 기능을 기본으로 제공합니다."
         },
         "typescript": {
@@ -75,11 +75,18 @@
       "activeProjects": "활성 프로젝트",
       "growth": "성장률",
       "recentActivity": "최근 활동",
+      "activityDescription": "워크스페이스의 최근 작업",
+      "fromLastMonth": "지난 달 대비",
       "viewAll": "모두 보기"
     },
     "analytics": {
       "title": "분석",
-      "description": "주요 지표를 추적하세요"
+      "description": "주요 지표를 추적하세요",
+      "monthlyOverview": "월간 개요",
+      "monthlyDescription": "지난 8개월간 성과 지표",
+      "pageViews": "페이지 뷰",
+      "uniqueVisitors": "순 방문자",
+      "bounceRate": "이탈률"
     },
     "settings": {
       "title": "설정",
@@ -92,7 +99,19 @@
     },
     "components": {
       "title": "컴포넌트",
-      "description": "사용 가능한 UI 컴포넌트 탐색"
+      "description": "사용 가능한 UI 컴포넌트 탐색",
+      "buttons": "버튼",
+      "buttonsDesc": "다양한 버튼 스타일과 크기",
+      "badges": "배지",
+      "badgesDesc": "상태 및 라벨 표시",
+      "formInputs": "폼 입력",
+      "formInputsDesc": "입력 필드와 라벨",
+      "avatars": "아바타",
+      "avatarsDesc": "사용자 프로필 표현",
+      "skeleton": "스켈레톤",
+      "skeletonDesc": "로딩 플레이스홀더",
+      "separator": "구분선",
+      "separatorDesc": "콘텐츠 구분선"
     }
   }
 }

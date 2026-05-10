@@ -24,8 +24,8 @@ export default async function AnalyticsPage() {
       <div className="flex-1 space-y-6 p-6">
         <Card>
           <CardHeader>
-            <CardTitle>Monthly Overview</CardTitle>
-            <CardDescription>Performance metrics for the past 8 months</CardDescription>
+            <CardTitle>{t("monthlyOverview")}</CardTitle>
+            <CardDescription>{t("monthlyDescription")}</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="flex items-end gap-2 h-48">
@@ -44,14 +44,14 @@ export default async function AnalyticsPage() {
         </Card>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {[
-            { label: "Page Views", value: "1.2M", trend: "+14.2%", color: "text-blue-500" },
-            { label: "Unique Visitors", value: "84.5K", trend: "+9.1%", color: "text-green-500" },
-            { label: "Bounce Rate", value: "32.4%", trend: "-2.3%", color: "text-red-500" },
-          ].map((item) => (
-            <Card key={item.label}>
+          {([
+            { labelKey: "pageViews", value: "1.2M", trend: "+14.2%", color: "text-blue-500" },
+            { labelKey: "uniqueVisitors", value: "84.5K", trend: "+9.1%", color: "text-green-500" },
+            { labelKey: "bounceRate", value: "32.4%", trend: "-2.3%", color: "text-red-500" },
+          ] as const).map((item) => (
+            <Card key={item.labelKey}>
               <CardHeader className="pb-2">
-                <CardTitle className="text-sm font-medium text-muted-foreground">{item.label}</CardTitle>
+                <CardTitle className="text-sm font-medium text-muted-foreground">{t(item.labelKey)}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="text-2xl font-bold">{item.value}</div>

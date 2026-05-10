@@ -17,17 +17,17 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const featureIcons = {
-  nextjs: Zap,
-  typescript: Shield,
-  shadcn: Layers,
-  darkmode: Moon,
-  i18n: Globe,
-  dashboard: LayoutDashboard,
-};
+const featureList = [
+  { key: "nextjs", Icon: Zap },
+  { key: "typescript", Icon: Shield },
+  { key: "shadcn", Icon: Layers },
+  { key: "darkmode", Icon: Moon },
+  { key: "i18n", Icon: Globe },
+  { key: "dashboard", Icon: LayoutDashboard },
+] as const;
 
 const techStack = [
-  { name: "Next.js 15", color: "bg-black text-white dark:bg-white dark:text-black" },
+  { name: "Next.js 16", color: "bg-black text-white dark:bg-white dark:text-black" },
   { name: "TypeScript", color: "bg-blue-600 text-white" },
   { name: "Tailwind CSS v4", color: "bg-cyan-500 text-white" },
   { name: "shadcn/ui", color: "bg-zinc-800 text-white dark:bg-zinc-200 dark:text-black" },
@@ -39,11 +39,11 @@ export default async function LandingPage() {
   const t = await getTranslations("landing");
   const locale = await getLocale();
 
-  const features = Object.entries(featureIcons).map(([key, Icon]) => ({
+  const features = featureList.map(({ key, Icon }) => ({
     key,
     Icon,
-    title: t(`features.items.${key}.title` as Parameters<typeof t>[0]),
-    description: t(`features.items.${key}.description` as Parameters<typeof t>[0]),
+    title: t(`features.items.${key}.title`),
+    description: t(`features.items.${key}.description`),
   }));
 
   return (
@@ -130,7 +130,7 @@ export default async function LandingPage() {
 
       <footer className="border-t py-8">
         <div className="container mx-auto max-w-6xl px-4 text-center text-sm text-muted-foreground">
-          Built with Next.js 15, Tailwind CSS, shadcn/ui — Open source starter kit
+          Built with Next.js 16, Tailwind CSS, shadcn/ui — Open source starter kit
         </div>
       </footer>
     </div>

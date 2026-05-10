@@ -1,7 +1,8 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/navigation";
+import { routing } from "@/i18n/routing";
 import { buttonVariants } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -12,10 +13,10 @@ import {
 import { Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const locales = [
-  { code: "ko", label: "한국어" },
-  { code: "en", label: "English" },
-];
+const locales = routing.locales.map((code) => ({
+  code,
+  label: code === "ko" ? "한국어" : "English",
+}));
 
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -23,9 +24,7 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
 
   const switchLocale = (newLocale: string) => {
-    const segments = pathname.split("/");
-    segments[1] = newLocale;
-    router.push(segments.join("/"));
+    router.replace(pathname, { locale: newLocale });
   };
 
   return (

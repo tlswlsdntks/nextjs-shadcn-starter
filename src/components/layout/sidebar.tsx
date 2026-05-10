@@ -62,7 +62,7 @@ export function Sidebar() {
       <nav className="flex flex-1 flex-col gap-1 p-2">
         {navItems.map(({ key, href, icon: Icon }) => {
           const fullHref = `/${locale}${href}`;
-          const isActive = pathname === fullHref || (href !== "/dashboard" && pathname.startsWith(fullHref));
+          const isActive = pathname === fullHref || (href !== "/dashboard" && pathname.startsWith(fullHref + "/"));
           const label = t(key as NavKey);
 
           return (
